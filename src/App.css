@@ -1,0 +1,63 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.app_container {
+  padding: 10px 10px;
+}
+
+.app_header {
+  width: 100%;
+  background-color: #6100bc;
+  color: white;
+  text-align: left;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.switcher_button1 {
+  width: 8rem;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  box-shadow: unset;
+  border: unset;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.switcher_button2 {
+  width: 8rem;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  box-shadow: unset;
+  border: unset;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.switcher_default {
+  padding: 14px 8px;
+  background-color: #6100bc;
+  border: 0.2px solid #6100bc;
+  font-weight: 500;
+  color: white;
+}
+
+.switcher_active {
+  font-weight: bold;
+  padding: 15px 8px;
+
+  background-color: #ffffff;
+  color: #6100bc;
+}
