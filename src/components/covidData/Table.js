@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Icon, Label, Menu, Table } from 'semantic-ui-react'
 
-const DataTable = ({ tableData }) => {
+const DataTable = ({ tableData, title }) => {
 
     const Header = ["Month", "Total Infected", "Male Infected", "Female Infected"];
 
@@ -45,7 +45,7 @@ const DataTable = ({ tableData }) => {
     return (
         <div style={{ padding: "0" }}>
             <div style={{ padding: "10px 10px", backgroundColor: "#f8ffff", border: "1px solid teal", borderRadius: "4px", marginBottom: "20px" }}>
-                <h5 style={{ marginBottom: "2px" }}> Total Data For The Year 2021</h5>
+                <h5 style={{ marginBottom: "2px" }}> {title} Total Data For The Year 2021</h5>
                 <p style={{ color: "gray", fontSize: "12px" }}>Click on the dropdown to change dates</p>
             </div>
             <Table celled>
@@ -59,8 +59,8 @@ const DataTable = ({ tableData }) => {
                 </Table.Header>
 
                 <Table.Body>
-                    {tableDataArray.map(data =>
-                    (<Table.Row>
+                    {tableDataArray.map((data, index) =>
+                    (<Table.Row key={index}>
                         <Table.Cell>{data.month}</Table.Cell>
                         <Table.Cell>{getTotalInfection(data.daily_records)}</Table.Cell>
                         <Table.Cell>{getMaleInfection(data.daily_records)}</Table.Cell>

@@ -1,10 +1,8 @@
-import React, { useState } from 'react'
-import Header from '../components/Header'
+import React, { useState, lazy, Suspense } from 'react'
 import Switcher from '../components/Switcher'
-import CovidView from './CovidView'
-import VaccinationView from './VaccinationView'
-
-
+import { Loader } from 'semantic-ui-react'
+const CovidView = lazy(() => import('./CovidView'))
+const VaccinationView = lazy(() => import('./VaccinationView'))
 
 const ViewContainer = () => {
     const [state, setState] = useState("covid")
@@ -13,7 +11,15 @@ const ViewContainer = () => {
         <div className="app_container">
             <Switcher setState={setState} switchData={switchData} state={state} />
             <div className="app_body">
-                {state === "covid" ? <CovidView /> : <VaccinationView />}
+                {state === "covid" ?
+                    <Suspense fallback={<Loader active inline />}>
+                        <CovidView />
+                    </Suspense>
+                    :
+                    <Suspense fallback={<Loader active inline />} >
+                        <VaccinationView />
+                    </Suspense>
+                }
             </div>
 
         </div>

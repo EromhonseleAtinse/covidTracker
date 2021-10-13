@@ -3,7 +3,7 @@ import { Input } from 'semantic-ui-react'
 import Chart from "react-apexcharts";
 import axios from 'axios';
 
-const Graph = ({ monthData }) => {
+const Graph = ({ monthData, title }) => {
 
     //const [data, setData] = useState([])
     const [categories, setCategories] = useState([])
@@ -91,7 +91,7 @@ const Graph = ({ monthData }) => {
     return (
         <div style={{ boxShadow: `-5px 5px 17px 2px rgba(235,223,223,0.75)`, borderRadius: "6px", padding: "5px 10px", minHeight: "40vh" }}>
             <div style={{ padding: "10px 10px", backgroundColor: "#f8ffff", border: "1px solid teal", borderRadius: "4px", marginBottom: "20px" }}>
-                <h5 style={{ marginBottom: "2px" }}> Data for the Month of January</h5>
+                <h5 style={{ marginBottom: "2px" }}>{title} Data for A Month</h5>
             </div>
             <Chart
                 options={options}
