@@ -1,16 +1,33 @@
-# Getting Started with Create React App
+## COVID19 TRACKER
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+###### Technologies used in implementing this project
 
-## Available Scripts
+**`React` `JSON Server` `axios`**
 
-In the project directory, you can run:
+##### Requirements and installation
 
-### Before Running The React App
+- Code Editor: To clone and view the code [VS CODE](https://code.visualstudio.com/download)\*\*
+- Node Js: As a major requirement to install any javascript related framework, dependency e.t.c [To Download](https://nodejs.org/en/download/)\*\*
 
-- After cloning the project successfully in your terminal type `npm run server` to start the server the responsible for serving the MOCK API response
+##### To download/clone this repository
 
-### `npm start`
+- In your editor terminal type `git clone *CODE LINK*`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+##### Installing Develpoment Dependencies
+
+- After cloning the project successfully in your terminal type `npm install` to install dev dependencies
+
+##### To run the project
+
+```
+npm start
+```
+
+##### To run test
+
+```
+npm test
+```
+
+> Runs the app in the development mode.
+> Open http://localhost:3000 to view it in the browser.

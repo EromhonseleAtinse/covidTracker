@@ -29,12 +29,14 @@ describe("Integration works well", () => {
             }
         ]
 
-        await axios.get.mockResolvedValueOnce(() => Promise.resolve({ data: data }))
+        await axios.get.mockResolvedValueOnce(() => Promise.resolve({ data: {} }))
         const useStateMock = (initState) => [initState, setLoading];
         jest.spyOn(React, 'useState').mockImplementation(useStateMock);
 
-        let cview = mount(<CovidView />)
-        await setLoading(false)
+        mount(<CovidView />)
+
+        setLoading(false)
+
         expect(axios.get).toHaveBeenCalledWith("http://localhost:5000/covid_19");
 
     })
