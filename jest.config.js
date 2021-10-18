@@ -8,5 +8,6 @@ module.exports = {
     },
     testMatch: [
         '<rootDir>/src/__test__/unitTest/*.test.js',
+        '<rootDir>/src/__test__/integrationTest/*.test.js',
     ],
 }

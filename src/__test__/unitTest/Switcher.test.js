@@ -1,6 +1,6 @@
 import React from 'react'
-import { render, screen, cleanup, fireEvent, waitFor } from '@testing-library/react';
-import { shallow, mount, configure } from 'enzyme';
+import { render, fireEvent } from '@testing-library/react';
+import { mount, configure } from 'enzyme';
 import Switcher from '../../components/Switcher';
 import ViewContainer from "../../views/ViewContainer"
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
