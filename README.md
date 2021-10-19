@@ -19,15 +19,30 @@
 
 ##### To run the project
 
+- We have to start first by enabling the server that serves the mock data by running the code below in the terminal
+
+```
+npm run server
+
+```
+
+- Then we start the react app by running the code below in the terminal
+
 ```
 npm start
-```
 
-##### To run test
-
-```
-npm test
 ```
 
 > Runs the app in the development mode.
 > Open http://localhost:3000 to view it in the browser.
+
+##### To run test
+
+- Kindly disable the runner server by typing `ctrl + c` in the terminal running the server and also diable the react app by equally typing `ctrl + c` in the terminal running the react app after that we can now type the code below in our terminal to run the test
+
+```
+npm test
+
+```
+
+- For further enquiries kindly send a mail to **`atinseeromhonsele@gmail.com`**
